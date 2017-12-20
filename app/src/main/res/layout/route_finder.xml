@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".routeFinder.RouteFinder">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.3"
+        android:scaleType="fitXY"
+        android:src="@drawable/delhi_metro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:alpha="0.4"
+            android:src="@drawable/shape" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/ACfrom"
+            android:layout_width="240sp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/NO_Color"
+
+            android:drawableStart="@drawable/ic_search_yellow_600_24dp"
+            android:hint="@string/from"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+
+            android:maxLength="35"
+            android:maxLines="1"
+            android:ems="12"
+            android:textColorHint="@color/secondaryTextColor" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.060000002">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:src="@drawable/shape" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/ACto"
+            android:layout_width="240sp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/NO_Color"
+            android:drawableStart="@drawable/ic_search_yellow_600_24dp"
+            android:ems="12"
+            android:hint="@string/to"
+            android:imeOptions="actionGo"
+            android:inputType="text"
+            android:maxLength="35"
+            android:maxLines="1"
+            android:textColorHint="@color/primaryTextColor" />
+
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/swap"
+        android:layout_width="65dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_swap_vert_black_48dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+
+    <TextView
+        android:id="@+id/search"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintVertical_bias="0.097" />
+
+
+</android.support.constraint.ConstraintLayout>
